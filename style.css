@@ -716,3 +716,60 @@ h4 {
     order: 6;
   }
 }
+
+/* General mobile + small tablet tweaks */
+@media (max-width: 768px) {
+  .header__title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 3rem;
+  }
+
+  .header__img {
+    order: -1;
+    transform: none;
+    max-width: 65%;
+    margin-bottom: 3rem;
+  }
+
+  h1 {
+    font-size: 4rem;
+    line-height: 1.2;
+  }
+
+  h4 {
+    font-size: 2.2rem;
+    margin-top: 1rem;
+  }
+
+  .btn--text {
+    font-size: 1.6rem;
+    margin-top: 2rem;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+    margin: 0 2rem;
+    gap: 6rem;
+  }
+
+  .features__feature {
+    width: 100%;
+    text-align: center;
+  }
+
+  .slide {
+    height: 47rem;
+  }
+
+  .testimonial {
+    width: 100%;
+    padding: 0 2rem;
+  }
+
+  .testimonial__author {
+    grid-template-columns: 5rem 1fr;
+  }
+}
