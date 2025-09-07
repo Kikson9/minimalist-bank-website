@@ -33,3 +33,20 @@ document.addEventListener('keydown', function (e) {
     closeModal();
   }
 });
+
+// Button smooth scrolling
+btnScrollTo.addEventListener('click', function (e) {
+  const s1coords = section1.getBoundingClientRect();
+  console.log(s1coords);
+
+  section1.scrollIntoView({ behavior: 'smooth' });
+});
+
+document.querySelector('.nav__links').addEventListener('click', function (e) {
+  e.preventDefault();
+
+  if (e.target.classList.contains('nav__link')) {
+    const id = e.target.getAttribute('href');
+    document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+  }
+});
