@@ -10,6 +10,8 @@ const tabs = document.querySelectorAll('.operations__tab');
 const tabsContainer = document.querySelector('.operations__tab-container');
 const tabsContent = document.querySelectorAll('.operations__content');
 const nav = document.querySelector('.nav');
+const btnNav = document.querySelector('.btn--mobile-nav');
+const navLinks = document.querySelector('.nav__links');
 
 // Modal window
 const openModal = function (e) {
@@ -110,6 +112,19 @@ const headerObserver = new IntersectionObserver(stickyNav, {
   rootMargin: `-${navHeight}px`,
 });
 headerObserver.observe(header);
+
+// Hamburger toggle (mobile nav)
+const divOverlay = document.createElement('div');
+divOverlay.classList.add('nav-overlay');
+document.body.appendChild(divOverlay);
+
+const toggleNav = function () {
+  navLinks.classList.toggle('active');
+  divOverlay.classList.toggle('active');
+};
+
+btnNav.addEventListener('click', toggleNav);
+divOverlay.addEventListener('click', toggleNav);
 
 // Reveal sections on scroll
 const revealSection = function (entries, observer) {
