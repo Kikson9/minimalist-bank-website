@@ -49,7 +49,7 @@ In this project every piece was built to mimic how a real product team would shi
 
 ## Live Demo
 
-👉 [View on Vercel](https://minimalist-banking-site.vercel.app/)
+👉 [View on Vercel](https://minimalist-banking-site.netlify.app/)
 
 ---
 
